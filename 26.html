@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+
+.container{
+    display:flex;
+}
+
+
+.sidebar{
+    width:220px;
+    height:100vh;
+    background:#eee;
+    padding:30px;
+}
+
+.sidebar ul{
+    list-style:none;
+    margin-top:40px;
+}
+
+.sidebar li{
+    margin:18px 0;
+    cursor:pointer;
+}
+
+
+
+.grid{
+    flex:1;
+    padding:15px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+
+.box{
+    position:relative;
+    overflow:hidden;
+}
+
+.box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+
+.big{
+    grid-row:span 2;
+}
+
+
+.box span{
+    position:absolute;
+    bottom:15px;
+    left:15px;
+    color:white;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="sidebar">
+        <h2>LOGO</h2>
+
+        <ul>
+            <li>HOME</li>
+            <li>PORTFOLIO</li>
+            <li>BLOG</li>
+            <li>ABOUT</li>
+            <li>CONTACT</li>
+        </ul>
+    </div>
+
+
+    <!-- RIGHT GRID -->
+    <div class="grid">
+
+        <div class="box big">
+            <img src="https://picsum.photos/600/700">
+            <span>WAITING FOR GODOT</span>
+        </div>
+
+        <div class="box">
+            <img src="https://picsum.photos/600/500">
+            <span>SOUL</span>
+        </div>
+
+        <div class="box">
+            <img src="https://picsum.photos/500/500">
+            <span>HEADACHE</span>
+        </div>
+
+        <div class="box">
+            <img src="https://picsum.photos/500/600">
+            <span>HEADSPACE</span>
+        </div>
+
+        <div class="box">
+            <img src="https://picsum.photos/500/550">
+            <span>WORKSPACE</span>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+</body>
+</html>
